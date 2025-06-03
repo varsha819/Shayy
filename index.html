@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I'm Sorry</title>
+  <style>
+    body {
+      background: url('https://i.gifer.com/7VE.gif') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+      overflow: hidden;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      display: inline-block;
+      max-width: 600px;
+      color: #333;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      color: #d6336c;
+      font-size: 2.5em;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6em;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-style: italic;
+      color: #888;
+    }
+
+    /* Heart animation styles */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(-45deg);
+      animation: floatUp 10s infinite ease-in;
+      opacity: 0.6;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 10px;
+      top: 0;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(1) rotate(-45deg);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2) rotate(-45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Heart Elements -->
+  <script>
+    for (let i = 0; i < 20; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = ${Math.random() * 100}vw;
+      heart.style.animationDuration = ${8 + Math.random() * 5}s;
+      heart.style.animationDelay = ${Math.random() * 5}s;
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <div class="card">
+    <h1>I'm Sorry...</h1>
+    <p>Hey love,</p>
+    <p>I know I messed up, and I want to say I’m truly sorry. Hurting you is the last thing I ever want to do.</p>
+    <p>You mean so much to me, and I hope we can talk, heal, and move forward—together.</p>
+    <p>Please know that my heart is full of love for you, always. 💖</p>
+    <div class="footer">– Gagan</div>
+  </div>
+</body>
+</html>
